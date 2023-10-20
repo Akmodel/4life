@@ -38,5 +38,6 @@
     "build": "tsc",
     "dev:start": "cross-env CALL_OPENVIDU_CERTTYPE=selfsigned nodemon src/app.ts"
   },
+   "type": "module",
   "version": "2.28.0"
 }

@@ -6,10 +6,11 @@
   "dependencies": {
     "chalk": "4.1.2",
     "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
     "dotenv": "16.0.3",
     "express": "4.18.2",
     "http-proxy-middleware": "2.0.6",
-    "openvidu-node-client": "2.28.0"
+    "openvidu-node-client": "2.29.0"
   },
   "description": "OpenVidu Call Server",
   "devDependencies": {
@@ -28,7 +29,7 @@
     "openvidu-call"
   ],
   "license": "Apache-2.0",
-  "main": "src/app.ts",
+  "main": "app.ts",
   "name": "openvidu-call-server",
   "repository": {
     "type": "git",
@@ -36,8 +37,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev:start": "cross-env CALL_OPENVIDU_CERTTYPE=selfsigned nodemon src/app.ts",
-    "start": "tsc --target es5 src/app.ts && node src/app.js"
+    "dev:start": "cross-env CALL_OPENVIDU_CERTTYPE=selfsigned nodemon src/app.ts"
   },
-  "version": "2.28.0"
+  "version": "2.29.0"
 }

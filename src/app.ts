@@ -1,6 +1,7 @@
 import * as cookieParser from 'cookie-parser';
 import * as dotenv from 'dotenv';
 import * as express from 'express';
+import * as cors from 'cors';
 import { app as authController } from './controllers/AuthController';
 import { app as broadcastController } from './controllers/BroadcastController';
 import { app as callController } from './controllers/CallController';
@@ -27,6 +28,13 @@ const authService = AuthService.getInstance();
 dotenv.config();
 const app = express();
 
+// Allow cors by default
+// Modify this if you want to restrict access to the server
+app.use(
+	cors({
+		origin: '*',
+	})
+);
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(cookieParser());
@@ -39,7 +47,7 @@ app.use('/auth', authController);
 
 // Accept selfsigned certificates if CALL_OPENVIDU_CERTTYPE=selfsigned
 if (CALL_OPENVIDU_CERTTYPE === 'selfsigned') {
-	process.env.NODE_TLS_REJECT_UNAUTHORIZED = '1';
+	process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 }
 app.listen(SERVER_PORT, () => {
 	const credential = chalk.yellow;

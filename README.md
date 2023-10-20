@@ -1,2 +1,0 @@
-# akOpenLive
-# 4life

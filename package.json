@@ -28,7 +28,7 @@
     "openvidu-call"
   ],
   "license": "Apache-2.0",
-  "main": "app.ts",
+  "main": "src/app.ts",
   "name": "openvidu-call-server",
   "repository": {
     "type": "git",

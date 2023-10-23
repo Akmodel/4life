@@ -48,6 +48,7 @@ app.use('/auth', authController);
 // Accept selfsigned certificates if CALL_OPENVIDU_CERTTYPE=selfsigned
 if (CALL_OPENVIDU_CERTTYPE === 'selfsigned') {
 	process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+	console.log("self signed")
 }
 app.listen(SERVER_PORT, () => {
 	const credential = chalk.yellow;

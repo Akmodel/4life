@@ -1,5 +1,5 @@
 export const SERVER_PORT = process.env.SERVER_PORT || 5000;
-export const OPENVIDU_URL = process.env.OPENVIDU_URL || 'https://ec2-44-204-173-6.compute-1.amazonaws.com/';
+export const OPENVIDU_URL = process.env.OPENVIDU_URL || 'https://ec2-44-204-183-226.compute-1.amazonaws.com/';
 export const OPENVIDU_SECRET = process.env.OPENVIDU_SECRET || 'akLive';
 export const CALL_OPENVIDU_CERTTYPE = process.env.CALL_OPENVIDU_CERTTYPE || 'selfsigned';
 export const CALL_PRIVATE_ACCESS = process.env.CALL_PRIVATE_ACCESS || 'ENABLED';

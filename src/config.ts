@@ -6,5 +6,5 @@ export const CALL_PRIVATE_ACCESS = process.env.CALL_PRIVATE_ACCESS || 'DISABLED'
 export const CALL_USER = process.env.CALL_USER || 'admin';
 export const CALL_SECRET = process.env.CALL_SECRET || OPENVIDU_SECRET;
 export const CALL_ADMIN_SECRET = process.env.CALL_ADMIN_SECRET || OPENVIDU_SECRET;
-export const CALL_RECORDING = process.env.CALL_RECORDING || 'ENABLED';
-export const CALL_BROADCAST = process.env.CALL_BROADCAST || 'ENABLED';
+export const CALL_RECORDING = process.env.CALL_RECORDING || 'DISABLED';
+export const CALL_BROADCAST = process.env.CALL_BROADCAST || 'DISABLED';
